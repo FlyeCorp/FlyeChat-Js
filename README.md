@@ -1,4 +1,6 @@
-# web
+# FlyeChat JS
+
+FlyeChat JS is a version a FlyeChat built of the Vue Js framework.
 
 ## Project setup
 ```
