@@ -1,0 +1,36 @@
+{
+  "servers": [
+    {
+      "id": 1,
+      "name": "Dank Empire",
+      "image": "https://picsum.photos/200/100",
+      "imageXoffset": 50
+    },
+    {
+      "id": 2,
+      "name": "Langley Dickheads",
+      "image": "https://picsum.photos/200/500",
+      "imageXoffset": 50
+    },
+    {
+      "id": 3,
+      "name": "FlyeChat Main Server",
+      "image": "https://picsum.photos/200/1000",
+      "imageXoffset": 50
+    }
+  ],
+  "textChannels": [
+    {
+      "id": 1,
+      "name": "General"
+    },
+    {
+      "id": 2,
+      "name": "Memes"
+    },
+    {
+      "id": 3,
+      "name": "Announcements"
+    }
+  ]
+}

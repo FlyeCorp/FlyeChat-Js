@@ -1,13 +1,12 @@
 <template>
 	<div>
-		<img :src="server.image" :alt="server.name">
-		<h1>{{server.name}}</h1>
+		<h1>{{textchannel.name}}</h1>
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'server',
+	name: 'textchannel',
 	props: {
 		server: Object,
 	},
@@ -17,7 +16,7 @@ export default {
 <style scoped>
 
 div {
-	background-color: #01010225;
+	background-color: #1B1C2766;
 	color: white;
 	display: flex;
 	align-items: center;
@@ -29,10 +28,6 @@ div {
 	overflow-x: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-}
-
-div:hover {
-	background: #35384d93;
 }
 
 img {

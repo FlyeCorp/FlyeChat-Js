@@ -1,24 +1,22 @@
 <template>
-  <div class="container">
-    <h1 class="title">FlyeChat</h1>
-    <div :key="server.id" v-for="server in servers">
-      <server :server="server" />
+    <div id="channel-list" class="container">
+        <h2 class="channel-header">Text Channels</h2>
+        <TextChannels />
     </div>
-  </div>
 </template>
 
 <script>
-import Server from "./Server";
+import TextChannels from './TextChannel'
 
 export default {
-  name: "Server List",
-  props: {
-    servers: Array,
+	name: 'Channel List',
+    props: {
+    textchannel: Array,
   },
   components: {
-    Server,
+    TextChannels,
   },
-};
+}
 </script>
 
 <style scoped>
@@ -28,8 +26,7 @@ export default {
   background: #1f202c;
   overflow-x: hidden;
   overflow-y: scroll;
-  z-index: 2;
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.363));
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.164));
 }
 
 ::-webkit-scrollbar {

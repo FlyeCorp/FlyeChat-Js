@@ -12,30 +12,27 @@ export default {
   }, 
   data() {
     return {
-      servers: []
+      servers: [],
       }
     },
-    created() {
-      this.servers = [
-        {
-          id: 1,
-          name: 'Dank Empire',
-          image: 'https://picsum.photos/200/100',
-          imageXoffset: 50,
-        },
-        {
-          id: 2,
-          name: 'Langley Dickheads',
-          image: 'https://picsum.photos/200/500',
-          imageXoffset: 50,
-        },
-        {
-          id: 3,
-          name: 'FlyeChat Main Server',
-          image: 'https://picsum.photos/200/300',
-          imageXoffset: 50,
-        },
-      ]
+    methods: {
+      async fetchServers() {
+        const res = await fetch("http://localhost:5000/servers")
+
+        const data = await res.json()
+
+        return data
+      },
+      async fetchChannels() {
+        const res = await fetch("http://localhost:5000/channels")
+
+        const data = await res.json()
+
+        return data
+      }
+    },
+    async created() {
+      this.servers = await this.fetchServers()
 
     }
 }
@@ -46,8 +43,15 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #1B1C27;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin: 10px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: white;
+  font-size: 25px;
 }
 </style>
